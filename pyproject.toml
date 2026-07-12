@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "researchai"
+version = "1.0.0"
+description = "Intelligent AI Research Agent powered by IBM watsonx"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["researchai*", "backend*", "config*"]
+
+[tool.setuptools.package-dir]
+"researchai" = "."

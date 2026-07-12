@@ -1,0 +1,15 @@
+2026-07-12 19:42:54 | ERROR    | watsonx_client                 | Failed to initialise watsonx client: Missing version in credentials for Cloud Pak for Data. Add key `version` to your credentials with a supported value, referring to your software version: ['5.0', '5.1', '5.2', '5.3', '5.4']
+2026-07-12 19:42:58 | INFO     | vector_store                   | ChromaDB initialised at C:\Users\JESSIE\.bob\playground\researchai\data\embeddings\chroma
+2026-07-12 19:42:58 | INFO     | vector_store                   | ChromaDB initialised at C:\Users\JESSIE\.bob\playground\researchai\data\embeddings\chroma
+2026-07-12 19:46:00 | ERROR    | watsonx_client                 | Failed to initialise watsonx client: Unable to get model specifications from url: https://au-syd.ml.cloud.ibm.com
+Reason: Failure during Get available foundation models. (GET https://au-syd.ml.cloud.ibm.com/ml/v1/foundation_model_specs?version=2026-06-10&project_id=c4531892-d718-4d5b-8f0b-d2a32cf15c32&filters=%21lifecycle_withdrawn&limit=200)
+Status code: 403, body: {"errors":[{"code":"no_associated_service_instance_error","message":"project_id c4531892-d718-4d5b-8f0b-d2a32cf15c32 is not associated with a WML instance","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#list-foundation-model-specs"}],"trace":"7118f59a36f2b982ef6337d13529384f","status_code":403}
+2026-07-12 20:05:21 | ERROR    | watsonx_client                 | Failed to initialise watsonx client: Unable to get model specifications from url: https://au-syd.ml.cloud.ibm.com
+Reason: Failure during Get available foundation models. (GET https://au-syd.ml.cloud.ibm.com/ml/v1/foundation_model_specs?version=2026-06-10&project_id=c4531892-d718-4d5b-8f0b-d2a32cf15c32&filters=%21lifecycle_withdrawn&limit=200)
+Status code: 403, body: {"errors":[{"code":"no_associated_service_instance_error","message":"project_id c4531892-d718-4d5b-8f0b-d2a32cf15c32 is not associated with a WML instance","more_info":"https://cloud.ibm.com/apidocs/watsonx-ai#list-foundation-model-specs"}],"trace":"3b972670ca821422da337e4c993456a5","status_code":403}
+2026-07-12 20:05:25 | INFO     | vector_store                   | ChromaDB initialised at C:\Users\JESSIE\.bob\playground\researchai\data\embeddings\chroma
+2026-07-12 20:05:26 | INFO     | vector_store                   | ChromaDB initialised at C:\Users\JESSIE\.bob\playground\researchai\data\embeddings\chroma
+2026-07-12 20:05:26 | INFO     | main                           | ResearchAI starting up — version 1.0.0
+2026-07-12 20:05:27 | INFO     | database                       | Database initialised at C:\Users\JESSIE\.bob\playground\researchai\data\researchai.db
+2026-07-12 20:05:27 | INFO     | main                           | Database ready
+2026-07-12 20:09:55 | INFO     | main                           | ResearchAI shutting down

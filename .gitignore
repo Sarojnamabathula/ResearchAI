@@ -1,0 +1,35 @@
+# Secrets
+.env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime data
+data/
+*.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+*.egg-info/
+dist/
+build/
+*.tar.gz
+*.whl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

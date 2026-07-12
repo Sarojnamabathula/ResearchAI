@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  # ── FastAPI Backend ──────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: researchai-backend
+    env_file: .env
+    environment:
+      - RESEARCHAI_API_URL=http://backend:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data          # persist papers, DB, embeddings, reports
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # ── Streamlit Frontend ────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: researchai-frontend
+    env_file: .env
+    environment:
+      - RESEARCHAI_API_URL=http://backend:8000
+    command:
+      - python
+      - -m
+      - streamlit
+      - run
+      - frontend/app.py
+      - --server.port=8501
+      - --server.address=0.0.0.0
+      - --server.headless=true
+    ports:
+      - "8501:8501"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  researchai_data:

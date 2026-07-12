@@ -1,35 +1,44 @@
-# Secrets
+﻿# ── Secrets ────────────────────────────────────────────────────────────────
 .env
 
-# Python bytecode
+# ── Python bytecode ────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
-# Virtual environments
+# ── Virtual environments ───────────────────────────────────────────────────
 .venv/
 venv/
 env/
 
-# Runtime data
+# ── Runtime data (all nested locations) ───────────────────────────────────
 data/
+backend/data/
 *.db
+*.db-shm
+*.db-wal
+*.sqlite3
+*.sqlite
 
-# Testing
+# ── Logs ───────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Testing ────────────────────────────────────────────────────────────────
 .pytest_cache/
 .coverage
 htmlcov/
+coverage.xml
 
-# Build
+# ── Build ──────────────────────────────────────────────────────────────────
 *.egg-info/
 dist/
 build/
 *.tar.gz
 *.whl
 
-# OS
+# ── OS ─────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
+desktop.ini
